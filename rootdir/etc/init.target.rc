@@ -1,5 +1,10 @@
 on init
 
+    # Custom overrides that need to happen right on boot
+    # Override vendor fstab
+    # We only need it to be overridden before things are mounted
+    mount none /system/etc/fstab.mt6771 /vendor/etc/fstab.mt6771 bind
+
     # bind mount libmtk-ril.so
     mount none /system/lib64/libmtk-ril.so /vendor/lib64/libmtk-ril.so bind
    
@@ -20,6 +25,7 @@ service kpoc_charger /system/bin/kpoc_charger
 
 on post-fs
 	mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
+	mount none /system/etc/fstab.mt6771 /vendor/etc/fstab.mt6771 bind
 
 on boot
 
