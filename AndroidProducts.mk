@@ -16,4 +16,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/stag_CPH1859.mk
+    $(LOCAL_DIR)/fuse_CPH1859.mk
