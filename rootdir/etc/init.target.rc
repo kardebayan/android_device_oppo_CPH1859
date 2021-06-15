@@ -27,6 +27,8 @@ on post-fs
 	mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
 	mount none /system/etc/fstab.mt6771 /vendor/etc/fstab.mt6771 bind
 
+mkdir /data/misc/logd 0700 logd log
+
 on boot
 
     # Touchscreen/DT2W
@@ -73,3 +75,8 @@ on property:sys.boot_completed=1
 
     exec - root -- /system/bin/sh -c "settings put global airplane_mode_on 0"
     exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false"
+
+service logcatd /system/bin/logcat -b all -f /data/misc/logd/logcat
+class main
+user root
+group root
