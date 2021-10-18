@@ -15,6 +15,7 @@ ro.sf.lcd_density=480
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
 persist.radio.erlvt.on=1
+persist.sys.binary_xml=false
 persist.sys.enable.hypnus=1
 vendor.camera.mdp.dre.enable=1
 vendor.camera.mdp.cz.enable=1
