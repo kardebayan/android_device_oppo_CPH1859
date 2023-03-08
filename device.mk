@@ -45,9 +45,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.provider@2.4.vendor
 
-PRODUCT_PACKAGES += \
-    Snap
-
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
