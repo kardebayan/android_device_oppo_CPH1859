@@ -191,6 +191,7 @@ PRODUCT_PACKAGES += \
     init.mt6771.rc \
     init.mt6771.usb.rc \
     init.oppo.reserve.rc \
+    init.recovery.mt6771.rc \
     init.sensor_1_0.rc \
     fstab.mt6771 \
     ueventd.mt6771.rc
